@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ItlsMango</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet"/>
+  <style>
+    /* Skills and Progress Bar */
+    .skill {
+      margin-bottom: 1.5rem;
+    }
+    .skill-label {
+      font-weight: bold;
+      margin-bottom: 0.3rem;
+    }
+    .progress-bar {
+      background-color: #333;
+      border-radius: 8px;
+      overflow: hidden;
+      height: 20px;
+      position: relative;
+    }
+    .progress-fill {
+      background: #78fcae;
+      height: 100%;
+      width: 0%;
+      transition: width 1s ease-in-out;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding-right: 5px;
+      color: #000;
+      font-weight: bold;
+    }
+
+    /* Services Section */
+    .service-item {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 2rem;
+      gap: 1rem;
+    }
+    .service-item .icon {
+      font-size: 2.5rem;
+      line-height: 1;
+      user-select: none;
+      flex-shrink: 0;
+    }
+    .service-item .content h3 {
+      margin: 0 0 0.3rem 0;
+      font-weight: 700;
+    }
+    .service-item .content p {
+      margin: 0 0 0.6rem 0;
+      font-size: 0.95rem;
+      color: #ddd;
+    }
+
+    /* Buttons Container */
+    .buttons-container {
+      margin-top: 2rem;
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    /* Button Styles */
+    .btn {
+      display: inline-block;
+      padding: 0.7rem 1.5rem;
+      border-radius: 10px;
+      font-weight: 700;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      user-select: none;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .btn-discord {
+      background-color: #5865F2;
+      color: white;
+      border: none;
+    }
+    .btn-discord:hover {
+      background-color: #4752c4;
+    }
+
+    .btn-blog {
+      background-color: #78fcae;
+      color: #121212;
+      border: none;
+    }
+    .btn-blog:hover {
+      background-color: #59c27a;
+    }
+
+    /* Hero Section with server icon */
+    #hero {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      background: #222;
+      border-radius: 20px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      color: #78fcae;
+      font-family: 'Inter', sans-serif;
+    }
+    #hero img {
+      width: 100px;
+      height: 100px;
+      border-radius: 20px;
+      border: 3px solid #78fcae;
+      box-shadow: 0 4px 15px #78fcae;
+      flex-shrink: 0;
+      object-fit: cover;
+    }
+    #hero-text {
+      max-width: 600px;
+    }
+    #hero h1 {
+      font-size: 3rem;
+      margin: 0 0 0.5rem 0;
+      color: #78fcae;
+      font-weight: 700;
+    }
+    #hero p {
+      font-size: 1.25rem;
+      line-height: 1.4;
+      margin: 0.3rem 0;
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Intro Animation -->
+  <div id="intro">
+    <img src="images/server-icon.png" alt="Logo" />
+  </div>
+
+  <!-- Main Content -->
+  <nav class="navbar hidden">
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section with server icon -->
+  <section id="hero">
+    <img src="images/server-icon.png" alt="Server Icon" />
+    <div id="hero-text">
+      <h1>Hey, I'm <span class="highlight">ItlsMango</span></h1>
+      <p>I am a Minecraft Developer, Server Administrator, and Website Developer from Slovenia.</p>
+      <p>Creating custom Minecraft servers, optimizing performance, and building unique web experiences.</p>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I build custom servers, optimize performance, and create cool tools for Minecraft.</p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skill">
+      <div class="skill-label"><i>Server Setup</i></div>
+      <div class="about">I make the server on the customers order!</div>
+      <div class="progress-bar"><div class="progress-fill" style="width: 100%;">100%</div></div>
+    </div>
+    <div class="skill">
+      <div class="skill-label"><i>Server Optimization</i></div>
+      <div class="about">I optimize the server to its limits the best I can!</div>
+      <div class="progress-bar"><div class="progress-fill" style="width: 40%;">40%</div></div>
+    </div>
+    <div class="skill">
+      <div class="skill-label"><i>Web Development</i></div>
+      <div class="about">I make custom websites on customers order the best I can!</div>
+      <div class="progress-bar"><div class="progress-fill" style="width: 60%;">60%</div></div>
+    </div>
+    <div class="skill">
+      <div class="skill-label"><i>Server Administration</i></div>
+      <div class="about">I provide the Discord server with an active response and</div>
+      <div class="about">help new members with help...</div>
+      <div class="progress-bar"><div class="progress-fill" style="width: 55%;">55%</div></div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Services</h2>
+  
+    <div class="service-item">
+      <div class="icon">🖥️</div>
+      <div class="content">
+        <h3>Server Optimisations</h3>
+        <p>Expert in Minecraft server optimisation—reduce lag, improve performance, and ensure smooth gameplay with fine-tuned settings and tweaks.</p>
+        <div class="progress-bar">
+          <div class="progress-fill" style="width: 100%;">100%</div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="service-item">
+      <div class="icon">⚙️</div>
+      <div class="content">
+        <h3>System Administration</h3>
+        <p>Experienced in managing and maintaining Minecraft servers—ensure uptime, security, and seamless performance with efficient system configurations.</p>
+        <div class="progress-bar">
+          <div class="progress-fill" style="width: 80%;">80%</div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="service-item">
+      <div class="icon">💻</div>
+      <div class="content">
+        <h3>Frontend Developer</h3>
+        <p>Good in creating custom websites!</p>
+        <div class="progress-bar">
+          <div class="progress-fill" style="width: 60%;">60%</div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="service-item">
+      <div class="icon">👥</div>
+      <div class="content">
+        <h3>Discord Staff Management</h3>
+        <p>Proficient in Discord team leadership—train, organise, and guide staff for effective community moderation and engagement.</p>
+        <div class="progress-bar">
+          <div class="progress-fill" style="width: 65%;">70%</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Buttons for Discord and Blog -->
+    <div class="buttons-container">
+      <a href="https://discord.gg/jmumqdZP" target="_blank" rel="noopener noreferrer" class="btn btn-discord">Join Discord</a>
+      <a href="blog.html" target="_blank" rel="noopener noreferrer" class="btn btn-blog">Read Blog</a>
+    </div>
+
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:sythe725@gmail.com">sythe725@gmail.com</a></p>
+    <p>Discord: <strong>itlsmango</strong></p>
+  </section>
+
+  <footer>© 2025 ItlsMango</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,188 @@
+/* Reset + base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #1a1a1a;
+  color: white;
+  font-family: 'Inter', sans-serif;
+  cursor: url('images/direct-selection.png') 16 16, auto;
+  overflow-x: hidden;
+  line-height: 1.6;
+  padding: 2rem;
+}
+
+/* Intro animation */
+#intro {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #0d0d0d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  animation: fadeOut 1s ease-in-out 2s forwards;
+}
+
+#intro img {
+  width: 120px;
+  animation: popIn 0.8s ease-in-out;
+}
+
+@keyframes popIn {
+  0% { transform: scale(0.5); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 20px;
+  right: 30px;
+  z-index: 10;
+}
+
+.navbar ul {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+  visibility: hidden;
+}
+
+.navbar a:hover {
+  color: #aaaaff;
+}
+
+/* Hero Section */
+#hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 5rem;
+  text-align: center;
+
+}
+
+h1 {
+  font-size: 2.8rem;
+}
+
+.highlight {
+  color: #00c0fa;
+}
+
+/* Sections */
+section {
+  padding: 4rem 0;
+  max-width: 800px;
+  margin: auto;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 4rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.big-text {
+  font-size: 29px;  
+}
+
+#services {
+  max-width: 800px;
+  margin: 2rem auto;
+  font-family: 'Inter', sans-serif;
+}
+
+.service-item {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  align-items: flex-start;
+}
+
+.icon {
+  font-size: 2rem;
+  width: 40px;
+  text-align: center;
+  color: #78fcae;
+  flex-shrink: 0;
+}
+
+.content h3 {
+  margin: 0 0 0.3rem 0;
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.content p {
+  margin: 0 0 0.6rem 0;
+  line-height: 1.4;
+  color: #555;
+}
+
+.progress-bar {
+  background-color: #333;
+  border-radius: 8px;
+  overflow: hidden;
+  height: 20px;
+  width: 100%;
+}
+
+.progress-fill {
+  background: #78fcae;
+  height: 100%;
+  color: #000;
+  font-weight: bold;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 8px;
+  transition: width 1s ease-in-out;
+}
+
+/* Add any additional styles you want here */
+/* You can move the styles from <style> inside the HTML to this file for cleanliness */
+
+body {
+  background-color: #121212;
+  color: #eee;
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 1rem 2rem;
+}
+
+h1, h2, h3 {
+  color: #78fcae;
+}
+
+/* Add any other site-wide styles here */
